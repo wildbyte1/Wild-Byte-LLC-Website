@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&family=Oswald:wght@200..700&family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+* {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 500;
+}
+
+@theme {
+  --color-primary: #c5d8af;
+  --color-secondary: #495a34;
+  --color-tertiary: #546259;
+  --color-light: #eeeae5;
+} /* primary is light green
+  secondary is dark bright green
+  tertiary is gray green */
