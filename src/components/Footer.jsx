@@ -28,8 +28,8 @@ const Footer = () => {
           <br />
           <p className='text-xs text-secondary text-semibold italic max-w-sm leading-relaxed'>
             Wild Byte was created on the ancestral lands of the
-            Gabrielino-Tongva people. This project is offered with respect and
-            gratitude to the Tongva community-past, present, and future.
+            Gabrielino-Kizh Nation. This project is offered with respect and
+            gratitude to the Gabrielino-Kizh community past, present, and future.
           </p>
         </div>
 
