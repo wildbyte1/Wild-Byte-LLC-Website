@@ -27,9 +27,9 @@ const Footer = () => {
           </p>
           <br />
           <p className='text-xs text-secondary text-semibold italic max-w-sm leading-relaxed'>
-            Wild Byte was created on the ancestral lands of the
-            Gabrielino-Kizh Nation. This project is offered with respect and
-            gratitude to the Gabrielino-Kizh community past, present, and future.
+            Wild Byte was created on the ancestral lands of the Gabrielino-Kizh
+            Nation. This project is offered with respect and gratitude to the
+            Gabrielino-Kizh community past, present, and future.
           </p>
         </div>
 
@@ -44,7 +44,7 @@ const Footer = () => {
           </a>
           <a
             className=' hover:bg-primary dark:hover:bg-secondary transition-colors duration-200'
-            href='https://www.instagram.com/wildbyteai/'
+            href='https://www.instagram.com/wildbytech/'
             target='_blank'
             rel='noopener noreferrer'
             className=' hover:bg-primary dark:hover:bg-secondary transition-colors duration-200'
@@ -61,7 +61,7 @@ const Footer = () => {
           </a>
           <a
             className=' hover:bg-primary dark:hover:bg-secondary transition-colors duration-200'
-            href='https://www.linkedin.com/home'
+            href='https://www.linkedin.com/company/wild-byte-llc/'
             target='_blank'
             rel='noopener noreferrer'
           >

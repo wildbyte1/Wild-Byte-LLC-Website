@@ -75,7 +75,7 @@ const AboutUs = () => {
         </main>
 
         <aside className='flex flex-col gap-8 lg:sticky lg:top-8'>
-          {/* Artifact Card 1 */}
+         
           <div className='bg-primary dark:bg-light p-4 rounded-xl shadow-sm border border-slate-100'>
             <div className='overflow-hidden rounded-lg bg-slate-50 flex items-center justify-center p-2'>
               <img
@@ -90,7 +90,7 @@ const AboutUs = () => {
             </p>
           </div>
 
-          {/* Artifact Card 2 */}
+         
           <div className='bg-primary dark:bg-light p-4 rounded-xl shadow-sm border border-slate-100'>
             <div className='overflow-hidden rounded-lg bg-slate-50 flex items-center justify-center p-2'>
               <img

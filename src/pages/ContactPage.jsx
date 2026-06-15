@@ -17,9 +17,9 @@ const ContactPage = () => {
   }, []);
 
   return (
-    // w-full max-w-5xl prevents elements from shifting behind your navbar boundaries
+    
     <div className='min-h-screen bg-stone-50 dark:bg-stone-950 text-stone-900 dark:text-stone-100 pt-28 px-4 max-w-5xl mx-auto pb-20 w-full overflow-hidden'>
-      {/* Header Section */}
+      
       <div className='text-center max-w-2xl mx-auto mb-10'>
         <Link
           to='/'
