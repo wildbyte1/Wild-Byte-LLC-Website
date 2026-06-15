@@ -13,11 +13,11 @@ const EarlyAccess = () => {
         explore the wild with us.
       </p>
 
-      {/* Two-Column Tier Grid */}
+     
       <div className='flex items-stretch justify-center flex-wrap gap-8 m-4'>
-        {/* Tier 1: Free Beta Explorer */}
+        
         <div className='flex-1 min-w-[300px] max-w-[400px] border-2 primary  rounded-2xl overflow-hidden bg-white shadow-sm flex flex-col text-left'>
-          {/* Section Image placeholder - Use an Unsplash landscape/animal image */}
+          
           <div className='h-48 bg-stone-100 relative overflow-hidden'>
             <img
               src={earlyAccessImages[3]}
@@ -38,7 +38,7 @@ const EarlyAccess = () => {
               launch.
             </p>
             <div className='mt-auto'>
-              {/* Simple Form or Email Link for Free Tier */}
+            
               <Link
                 to='/our-work?tier=beta'
                 className='w-full bg-secondary hover:bg-primary text-white font-semibold py-2.5 px-4 rounded-xl text-sm transition-colors duration-200 cursor-pointer'
@@ -49,7 +49,7 @@ const EarlyAccess = () => {
           </div>
         </div>
 
-        {/* Tier 2: Paid Founding Member / VIP */}
+        
         <div className='flex-1 min-w-[300px] max-w-[400px] border-2 primary rounded-2xl overflow-hidden bg-white shadow-md flex flex-col text-left relative'>
           <div className='absolute top-3 right-3 text-light text-xs font-bold px-3 py-1 rounded-full'>
             $25 Suggested
@@ -85,7 +85,7 @@ const EarlyAccess = () => {
               </li>
             </ul>
             <div className='mt-auto'>
-              {/* Stripe or Crowdfunding Link button */}
+              
               <Link
                 to='/our-work?tier=founder'
                 className='w-full bg-secondary hover:bg-primary text-white font-semibold py-2.5 px-4 rounded-xl text-sm transition-colors duration-200 shadow-sm cursor-pointer'

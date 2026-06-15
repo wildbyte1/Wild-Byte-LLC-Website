@@ -9,6 +9,7 @@ import OurWorkPage from './components/OurWorkPage';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsOfService from './pages/TermsOfService';
 import ContactPage from './pages/ContactPage';
+import AboutUs from './components/AboutUs';
 
 const App = () => {
   const [theme, setTheme] = useState(
@@ -37,6 +38,7 @@ const App = () => {
           <Route path='/our-work' element={<OurWorkPage />} />
           <Route path='/privacy' element={<PrivacyPolicy />} />
           <Route path='/terms' element={<TermsOfService />} />
+          <Route path='/about-us' element={<AboutUs />} />
           <Route path='/contact' element={<ContactPage />} />
         </Routes>
 

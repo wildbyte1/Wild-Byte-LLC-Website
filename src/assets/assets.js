@@ -32,6 +32,8 @@ import workshop2 from './workshop2.png'
 import workshop3 from './workshop3.png'
 import prototype1 from './prototype1.png'
 import prototype2 from './prototype2.png'
+import about_us1 from './about_us1.png'
+import about_us2 from './about_us2.png'
 
 
 
@@ -77,6 +79,8 @@ const assets = {
   workshop3,
   prototype1,
   prototype2,
+  about_us1,
+  about_us2
 }
 
 export default assets
