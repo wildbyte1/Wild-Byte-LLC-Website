@@ -108,9 +108,9 @@ const OurWorkPage = () => {
             </p>
           </header>
 
-          {/* Screenshot Grid Container */}
+        
           <div className='grid grid-cols-1 md:grid-cols-2 gap-6 bg-stone-100 dark:bg-stone-950 p-4 rounded-xl border border-stone-200 dark:border-stone-800 w-full'>
-            {/* Screenshot 1 */}
+            
             <div className='overflow-hidden rounded-lg shadow-md border border-stone-300 dark:border-stone-800 bg-white dark:bg-stone-900'>
               <img
                 src={assets.prototype1}
@@ -119,7 +119,7 @@ const OurWorkPage = () => {
               />
             </div>
 
-            {/* Screenshot 2 */}
+       
             <div className='overflow-hidden rounded-lg shadow-md border border-stone-300 dark:border-stone-800 bg-white dark:bg-stone-900'>
               <img
                 src={assets.prototype2}
@@ -138,7 +138,7 @@ const OurWorkPage = () => {
         </div>
       </section>
 
-      {/* DYNAMIC DATA INTAKE FORM */}
+      
       <section className='max-w-xl mx-auto bg-light dark:bg-tertiary border border-tertiary dark:border-white p-6 sm:p-10 rounded-2xl shadow-xl mb-32 transition-colors'>
         <header className='mb-8'>
           <span className='text-xs font-bold uppercase tracking-widest px-2.5 py-1 rounded bg-primary dark:bg-primary text-secondary dark:text-white'>
