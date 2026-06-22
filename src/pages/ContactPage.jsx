@@ -21,7 +21,7 @@ const ContactPage = () => {
 
   return (
     <div className='min-h-screen bg-stone-50 dark:bg-stone-950 text-stone-900 dark:text-stone-100 pt-28 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto pb-20 w-full overflow-hidden'>
-      {/* HEADER SECTION */}
+      
       <div className='text-center max-w-2xl mx-auto mb-12'>
         <Link
           to='/'
@@ -35,11 +35,11 @@ const ContactPage = () => {
         <p className='text-secondary dark:text-stone-300 text-sm sm:text-base leading-relaxed'>
           Whether you want to bring an interactive workshop to your community,
           coordinate a custom educational curriculum, or explore digital archive
-          collaborations—select a window or shoot us a line below.
+          collaborations, select a window or shoot us a line below.
         </p>
       </div>
 
-      {/* PROGRAMS & CURRICULA GALLERY */}
+    
       <div className='mb-16 w-full'>
         <div className='mb-6 border-b border-stone-200 dark:border-stone-800 pb-2 flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 w-full'>
           <h2 className='text-xl font-black text-tertiary dark:text-primary'>
@@ -52,69 +52,78 @@ const ContactPage = () => {
         </div>
 
         <div className='grid grid-cols-1 md:grid-cols-3 gap-5 w-full'>
-          {/* CARD 1 */}
+        
           <div className='relative group overflow-hidden rounded-xl bg-stone-100 border border-stone-200 dark:border-stone-800 shadow-md h-56 transition-all'>
             <img
               src={assets.workshop1}
               alt='Succulent planting and terracotta pot painting art therapy'
               className='w-full h-full object-cover transition-transform duration-500 group-hover:scale-105'
             />
-            <div className='absolute inset-0 bg-gradient-to-t from-stone-950/95 via-stone-950/60 to-transparent p-4 flex flex-col justify-end'>
+            <div className='absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/80 to-transparent p-4 flex flex-col justify-end transition-all'>
               <p className='text-sm font-bold text-white tracking-wide'>
-                Horticultural & Core Nature Connection
+                Nature Art & Connection
               </p>
-              <p className='text-[11px] text-stone-300 mt-1 leading-relaxed line-clamp-3'>
-                Integrating container gardening, native flora planting, and
-                physical pottery crafts to inspire sensory engagement, creative
-                focus, and active interaction with the local natural world.
-              </p>
+              
+              <div className='h-[52px] group-hover:h-[105px] transition-all duration-300 ease-in-out overflow-hidden'>
+                <p className='text-[11px] text-stone-300 mt-1 leading-relaxed'>
+                  Integrating container gardening, physical pottery crafts to
+                  inspire sensory engagement, creative focus, and active
+                  interaction with the local natural world.
+                </p>
+              </div>
             </div>
           </div>
 
-          {/* CARD 2 */}
+    
           <div className='relative group overflow-hidden rounded-xl bg-stone-100 border border-stone-200 dark:border-stone-800 shadow-md h-56 transition-all'>
             <img
               src={assets.workshop2}
               alt='Nature group walk with mindfulness and CA native wildlife observation'
               className='w-full h-full object-cover transition-transform duration-500 group-hover:scale-105'
             />
-            <div className='absolute inset-0 bg-gradient-to-t from-stone-950/95 via-stone-950/60 to-transparent p-4 flex flex-col justify-end'>
+            <div className='absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/80 to-transparent p-4 flex flex-col justify-end transition-all'>
               <p className='text-sm font-bold text-white tracking-wide'>
-                Ecological Observation & Botanical Folklore
+                Ecological Observation
               </p>
-              <p className='text-[11px] text-stone-300 mt-1 leading-relaxed line-clamp-3'>
-                Guided walks highlighting California native species and
-                historical folklore mythology. Participants engage deeply with
-                the local natural world by linking historic data to community
-                spaces.
-              </p>
+              
+              <div className='h-[52px] group-hover:h-[105px] transition-all duration-300 ease-in-out overflow-hidden'>
+                <p className='text-[11px] text-stone-300 mt-1 leading-relaxed'>
+                  Guided walks highlighting California native species and
+                  historical folklore mythology. Participants engage deeply with
+                  the local natural world by linking historic data to community
+                  spaces.
+                </p>
+              </div>
             </div>
           </div>
 
-          {/* CARD 3 */}
+         
           <div className='relative group overflow-hidden rounded-xl bg-stone-100 border border-stone-200 dark:border-stone-800 shadow-md h-56 transition-all'>
             <img
               src={assets.workshop3}
               alt='Community composting scraps'
               className='w-full h-full object-cover transition-transform duration-500 group-hover:scale-105'
             />
-            <div className='absolute inset-0 bg-gradient-to-t from-stone-950/95 via-stone-950/60 to-transparent p-4 flex flex-col justify-end'>
+            <div className='absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/80 to-transparent p-4 flex flex-col justify-end transition-all'>
               <p className='text-sm font-bold text-white tracking-wide'>
                 Urban Ecology & Natural Systems
               </p>
-              <p className='text-[11px] text-stone-300 mt-1 leading-relaxed line-clamp-3'>
-                Interactive modeling focusing on composting cycles, healthy soil
-                production, and micro-habitat cultivation to encourage
-                collaborative environmental stewardship and neighborhood
-                eco-literacy.
-              </p>
+              
+              <div className='h-[52px] group-hover:h-[105px] transition-all duration-300 ease-in-out overflow-hidden'>
+                <p className='text-[11px] text-stone-300 mt-1 leading-relaxed'>
+                  Hands on workshops focusing on composting cycles, healthy soil
+                  production, and elimination of food waste. These workshops
+                  foster a sense of collaboration and environmental stewardship
+                  within the community.
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
+      
       <div className='grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12 items-stretch w-full'>
-       
         <div className='lg:col-span-2 flex flex-col justify-between bg-stone-100 dark:bg-stone-900 border border-stone-200 dark:border-stone-800 p-6 rounded-2xl shadow-xl transition-colors'>
           <div>
             <span className='text-[10px] uppercase font-bold tracking-widest text-white dark:text-primary bg-primary dark:bg-primary/20 px-3 py-1 rounded-full inline-block mb-3'>
@@ -129,7 +138,6 @@ const ContactPage = () => {
               email directly.
             </p>
 
-          
             <div className='flex items-center gap-4 bg-stone-50 dark:bg-stone-950 p-4 rounded-xl border border-stone-200 dark:border-stone-800 mb-6 group'>
               <div className='p-3 rounded-xl bg-secondary dark:bg-primary text-white dark:text-tertiary shadow-sm transition-transform group-hover:scale-105 flex items-center justify-center'>
                 <svg
@@ -160,12 +168,10 @@ const ContactPage = () => {
               </div>
             </div>
 
-           
             <h3 className='text-xs font-bold uppercase tracking-wider text-stone-500 dark:text-stone-400 mb-3'>
               Service Coverage Area
             </h3>
             <div className='grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs sm:text-sm mb-6'>
-            
               <div className='p-4 rounded-xl bg-tertiary dark:bg-stone-950/50 border border-tertiary/20 dark:border-stone-800'>
                 <span className='font-bold text-primary/100 dark:text-primary block mb-1 text-sm'>
                   📍 Southern California In-Person
@@ -193,7 +199,7 @@ const ContactPage = () => {
               <img
                 src={assets.service_map}
                 alt='Wild Byte Southern California Operational Coverage Map: Inland Empire, Los Angeles, Orange County'
-                className='w-full h-full object-cover opacity-80 dark:opacity-90 transition-transform duration-700 group-hover:scale-[1.02]'
+                className='w-full h-full object-cover opacity-80 dark:opacity-100 transition-transform duration-700 group-hover:scale-[1.02]'
                 onError={(e) => {
                   e.target.style.display = 'none';
                   e.target.nextSibling.style.display = 'flex';
@@ -212,6 +218,7 @@ const ContactPage = () => {
           </div>
         </div>
 
+       
         <div className='bg-light dark:bg-primary border-stone-200 dark:border-stone-800 p-6 rounded-2xl shadow-xl flex flex-col justify-between transition-colors w-full'>
           <div>
             <div className='flex items-center justify-between mb-3 w-full'>
