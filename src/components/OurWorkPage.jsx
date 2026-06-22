@@ -124,7 +124,7 @@ const OurWorkPage = () => {
 
   return (
     <div className='min-h-screen bg-stone-50 dark:bg-stone-950 text-stone-900 dark:text-stone-100 pt-24 sm:pt-28 md:pt-32 px-4 sm:px-6 lg:px-8 w-full overflow-x-hidden'>
-      {/* METHODOLOGY SECTION */}
+      
       <section className='max-w-4xl mx-auto mb-12 border-b border-stone-200 dark:border-stone-800 pb-12 w-full'>
         <Link
           to='/'
@@ -157,7 +157,7 @@ const OurWorkPage = () => {
         </div>
       </section>
 
-      {/* PROTOTYPE SHOWCASE SECTION */}
+      
       <section className='max-w-4xl mx-auto mb-16 w-full'>
         <div className='bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 p-4 sm:p-6 md:p-8 rounded-2xl shadow-xl shadow-secondary/5 w-full'>
           <header className='mb-6 w-full'>
@@ -204,7 +204,7 @@ const OurWorkPage = () => {
         </div>
       </section>
 
-      {/* MEMBERSHIP TIERS GRID SECTION */}
+      
       <section className='max-w-4xl mx-auto mb-16 w-full'>
         <div className='text-center mb-8 px-2 w-full'>
           <h2 className='text-xl sm:text-2xl md:text-3xl lg:text-4xl font-black tracking-tight text-secondary dark:text-light'>
@@ -221,12 +221,12 @@ const OurWorkPage = () => {
             const tier = TIER_SETTINGS[key];
             const isSelected = activeTier === key;
 
-            // 1. Structural Brand Color Alternations (Ditching Flat Dark Blacks/Grays)
+            
             const cardStyles = isSelected
               ? 'bg-light dark:bg-tertiary border-secondary dark:border-primary shadow-xl ring-4 ring-primary/20 lg:scale-[1.03] z-10'
               : 'bg-white dark:bg-stone-900/60 border-stone-200 dark:border-stone-800/80 shadow-sm hover:border-secondary dark:hover:border-primary';
 
-            // 2. High-Contrast Typography Adaptations
+            
             const titleStyles = isSelected
               ? 'text-tertiary dark:text-primary font-black'
               : 'text-stone-800 dark:text-stone-200 font-bold';
@@ -243,7 +243,7 @@ const OurWorkPage = () => {
               ? 'text-secondary dark:text-stone-100 font-medium'
               : 'text-stone-600 dark:text-stone-400';
 
-            // 3. Dynamic Mode-Specific Button Transitions
+            
             const buttonStyles = isSelected
               ? 'bg-secondary text-white dark:bg-primary dark:text-tertiary font-black shadow-inner'
               : 'bg-stone-100 text-stone-700 dark:bg-stone-800 dark:text-stone-300 group-hover:bg-secondary group-hover:text-white dark:group-hover:bg-primary dark:group-hover:text-tertiary';
@@ -295,7 +295,7 @@ const OurWorkPage = () => {
         </div>
       </section>
 
-      {/* APPLICATION REGISTRATION FORM CONTAINER */}
+      
       <section className='max-w-xl mx-auto bg-light dark:bg-stone-900 border border-tertiary dark:border-stone-800 p-5 sm:p-8 md:p-10 rounded-2xl shadow-xl mb-32 transition-colors w-full'>
         <header className='mb-6 border-b border-stone-200 dark:border-stone-800 pb-4 w-full'>
           <span className='text-[10px] sm:text-xs font-bold uppercase tracking-widest px-2.5 py-1 rounded bg-secondary dark:bg-primary text-white dark:text-tertiary inline-block'>
@@ -370,7 +370,7 @@ const OurWorkPage = () => {
               />
             </div>
 
-            {/* Mode-Reactive Core Submit Action Button */}
+            
             <button
               type='submit'
               disabled={isSubmitting}
