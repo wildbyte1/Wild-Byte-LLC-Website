@@ -257,7 +257,7 @@ const ContactPage = () => {
             </a>
 
             <h3 className='text-md text-secondary font-extrabold dark:text-white/100 mb-1'>
-              Decoding Natural Archives
+              Decoding Natural History Archives
             </h3>
             <p className='text-[14px] text-tertiary dark:text-tertiary leading-relaxed italic'>
               Exploring how primary source documents, wildlife records, and
