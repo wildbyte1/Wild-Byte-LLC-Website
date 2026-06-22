@@ -34,7 +34,8 @@ import prototype1 from './prototype1.png'
 import prototype2 from './prototype2.png'
 import about_us1 from './about_us1.png'
 import about_us2 from './about_us2.png'
-
+import tiktok_preview from './tiktok_preview.PNG'
+import service_map from './service_map.png'
 
 
 export const earlyAccessImages = [
@@ -80,7 +81,9 @@ const assets = {
   prototype1,
   prototype2,
   about_us1,
-  about_us2
+  about_us2,
+  tiktok_preview,
+  service_map
 }
 
 export default assets
