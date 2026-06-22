@@ -64,7 +64,7 @@ const EarlyAccess = () => {
 
           <div className='p-6 flex-1 flex flex-col'>
             <h4 className='font-bold text-xl text-secondary mb-1'>
-              VIP Founding Member
+              Wild Byte Member
             </h4>
             <p className='text-sm text-tertiary mb-4 leading-relaxed'>
               Directly support the development of Wild Byte. Your contribution
@@ -90,7 +90,7 @@ const EarlyAccess = () => {
                 to='/our-work?tier=founder'
                 className='w-full bg-secondary hover:bg-primary text-white font-semibold py-2.5 px-4 rounded-xl text-sm transition-colors duration-200 shadow-sm cursor-pointer'
               >
-                Become a Founder
+                Become a Member
               </Link>
             </div>
           </div>
