@@ -31,7 +31,7 @@ const TIER_SETTINGS = {
     priceText: '$99',
     typeText: 'One-Time Contribution',
     description:
-      'Gain ultimate VIP status. Help shape our development roadmap, receive permanent platform wall-of-fame recognition, and test all early software frameworks.',
+      'Gain ultimate VIP status. Help shape our development roadmap, receive permanent platform wall of fame recognition, and test all early software frameworks.',
     inputLabel:
       'How would you like to see technology and archive curation collaborate?',
     stripeUrl: 'https://buy.stripe.com/fZu14n4HL9bjcinaDa3cc02',
