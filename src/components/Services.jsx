@@ -38,13 +38,13 @@ const Services = () => {
       </div>
 
      
-      <div className='w-full mb-12 p-6 rounded-2xl bg-stone-100 dark:bg-stone-900 border border-tertiary dark:border-stone-800 flex flex-col sm:flex-row items-center justify-between gap-6 transition-colors shadow-sm'>
+      <div className='w-full mb-12 p-6 rounded-2xl bg-stone-100 dark:bg-gray-700 border border-tertiary dark:border-primary flex flex-col sm:flex-row items-center justify-between gap-6 transition-colors shadow-sm'>
         <div className='text-center sm:text-left max-w-2xl'>
           <div className='flex flex-wrap items-center justify-center sm:justify-start gap-2 mb-2'>
             <span className='text-[10px] uppercase font-black tracking-widest text-white bg-secondary dark:bg-primary dark:text-tertiary px-3 py-1 rounded-full inline-block'>
               ¡Hablamos Español!
             </span>
-            <span className='text-xs font-bold text-stone-500 dark:text-stone-400'>
+            <span className='text-xs font-extrabold text-stone-500 dark:text-light'>
               Bilingual Facilitation Available
             </span>
           </div>
