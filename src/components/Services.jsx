@@ -15,7 +15,7 @@ const Services = () => {
     {
       title: 'Community Workshops & Public Programs',
       description:
-        'Bridging digital storytelling with hands on community workshops. We design and facilitate interactive, family friendly experiences such as nature art therapy, garden ecology, and wildflie habitat building tailored for local schools, community gardens, and educational spaces and organizations.',
+        'Bridging digital storytelling with hands on community workshops. We design and facilitate interactive, family friendly experiences such as nature art therapy, garden ecology, and wildlife habitat building tailored for local schools, community gardens, and educational spaces and organizations.',
       icon: assets.bison_smithsonian,
     },
   ];
@@ -30,14 +30,12 @@ const Services = () => {
         desc='We offer a range of services to engage and educate your audience about wildlife and conservation.'
       />
 
-     
       <div className='flex flex-col md:grid grid-cols-2 gap-6 w-full mb-4'>
         {servicesData.map((service, index) => (
           <ServiceCard key={index} service={service} index={index} />
         ))}
       </div>
 
-     
       <div className='w-full mb-12 p-6 rounded-2xl bg-stone-100 dark:bg-gray-700 border border-tertiary dark:border-primary flex flex-col sm:flex-row items-center justify-between gap-6 transition-colors shadow-sm'>
         <div className='text-center sm:text-left max-w-2xl'>
           <div className='flex flex-wrap items-center justify-center sm:justify-start gap-2 mb-2'>
@@ -49,13 +47,13 @@ const Services = () => {
             </span>
           </div>
           <p className='text-sm text-secondary dark:text-stone-300 leading-relaxed'>
-            All digital storytelling platforms, community workshops, and
-            public archival collaborations can be customized as fully bilingual
-            experiences or facilitated entirely in Spanish to support inclusivity. 
+            All digital storytelling platforms, community workshops, and public
+            archival collaborations can be customized as fully bilingual
+            experiences or facilitated entirely in Spanish to support
+            inclusivity.
           </p>
         </div>
 
-        
         <Link
           to='/contact'
           className='whitespace-nowrap px-5 py-3 bg-secondary hover:bg-tertiary dark:bg-primary dark:text-tertiary dark:hover:bg-light text-white text-xs font-extrabold uppercase tracking-wider rounded-xl transition-all shadow-sm active:scale-95 text-center w-full sm:w-auto'
