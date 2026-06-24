@@ -122,7 +122,8 @@ const ContactPage = () => {
           <div>
             <span className='text-[10px] uppercase font-bold tracking-widest text-white dark:text-primary bg-primary dark:bg-primary/20 px-3 py-1 rounded-full inline-block mb-3'>
               Direct Channels
-            </span> <br />
+            </span>{' '}
+            <br />
             <span className='text-xs font-bold text-secondary dark:text-primary italic'>
               ¡Hablamos Español!
             </span>
@@ -134,7 +135,6 @@ const ContactPage = () => {
               custom narrative development requests? Skip the automation and
               email directly.
             </p>
-
             <div className='flex items-center gap-4 bg-stone-50 dark:bg-stone-950 p-4 rounded-xl border border-stone-200 dark:border-stone-800 mb-6 group'>
               <div className='p-3 rounded-xl bg-secondary dark:bg-primary text-white dark:text-tertiary shadow-sm transition-transform group-hover:scale-105 flex items-center justify-center'>
                 <svg
@@ -164,7 +164,6 @@ const ContactPage = () => {
                 </a>
               </div>
             </div>
-
             <h3 className='text-xs font-bold uppercase tracking-wider text-stone-500 dark:text-stone-400 mb-3'>
               Service Coverage Area
             </h3>
@@ -191,7 +190,6 @@ const ContactPage = () => {
                 </p>
               </div>
             </div>
-
             <div className='w-full rounded-xl overflow-hidden border border-stone-200 dark:border-stone-800 bg-stone-100 dark:bg-stone-950 h-40 relative group shadow-inner'>
               <img
                 src={assets.service_map}
