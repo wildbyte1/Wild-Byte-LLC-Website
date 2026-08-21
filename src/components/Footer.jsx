@@ -71,19 +71,28 @@ const Footer = () => {
           </div>
 
           
-          <a
-            href='https://ranchochamber.chambermaster.com/list/member/wild-byte-llc-16882'
-            target='_blank'
-            rel='noopener noreferrer'
-            className='mt-2 flex items-center justify-center md:justify-end group'
-            title='Proud Member of Rancho Cucamonga Chamber of Commerce'
-          >
-            <img
-              src='/rancho-chamber-logo.png'
-              alt='Proud Member of the Rancho Cucamonga Chamber of Commerce'
-              className='h-12 sm:h-14 w-auto object-contain transition-transform group-hover:scale-105 rounded-md'
-            />
-          </a>
+          <<div className='flex flex-col items-center md:items-end text-center md:text-right pt-2'>
+            <span className='text-[10px] sm:text-[11px] font-black uppercase tracking-wider text-secondary dark:text-light mb-1'>
+              Proud Member of the
+            </span>
+            <span className='text-xs sm:text-sm font-extrabold text-tertiary dark:text-white mb-2.5'>
+              Rancho Cucamonga Chamber of Commerce
+            </span>
+            
+            <a
+              href='https://ranchochamber.chambermaster.com/list/member/wild-byte-llc-16882'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='group inline-block transition-transform duration-200 hover:scale-105 active:scale-95'
+              title='View Wild Byte LLC on the Rancho Cucamonga Chamber of Commerce Directory'
+            >
+              <img
+                src='/rc-chamber-logo.png'
+                alt='Proud Member of the Rancho Cucamonga Chamber of Commerce'
+                className='h-20 sm:h-24 md:h-28 w-auto max-w-[240px] object-contain rounded-xl p-2 bg-white/90 dark:bg-white shadow-sm border border-stone-200 dark:border-transparent'
+              />
+            </a>
+          </div>
         </div>
       </div>
 
