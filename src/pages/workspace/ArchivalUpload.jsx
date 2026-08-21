@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 import { ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
-import { db, storage } from '../../config/firebase';
+import { db, storage } from '../../firebase';
 
 const ArchivalUpload = () => {
   const [title, setTitle] = useState('');

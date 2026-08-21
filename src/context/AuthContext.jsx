@@ -1,9 +1,9 @@
-import React, { createContext, useContext, useEffect, useState } from 'react';
+import React, { createContext, useEffect, useState } from 'react';
 import { onAuthStateChanged } from 'firebase/auth';
 import { doc, getDoc } from 'firebase/firestore';
-import { auth, db } from '../config/firebase';
+import { auth, db } from '../firebase';
 
-const AuthContext = createContext({
+export const AuthContext = createContext({
   user: null,
   userProfile: null,
   loading: true,
@@ -19,7 +19,6 @@ export const AuthProvider = ({ children }) => {
       setUser(currentUser);
 
       if (currentUser) {
-        
         const userDocRef = doc(db, 'users', currentUser.uid);
         const userDocSnap = await getDoc(userDocRef);
 
@@ -43,5 +42,3 @@ export const AuthProvider = ({ children }) => {
     </AuthContext.Provider>
   );
 };
-
-export const useAuth = () => useContext(AuthContext);

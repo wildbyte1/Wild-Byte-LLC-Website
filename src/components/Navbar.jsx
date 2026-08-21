@@ -8,32 +8,34 @@ const Navbar = ({ theme, setTheme }) => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  const handleNavigation = (targetPath, sectionId) => {
+  const handleNavigation = (targetPath, sectionId = 'top') => {
     setSidebarOpen(false);
 
     if (location.pathname === targetPath) {
-      const element = document.getElementById(sectionId);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      } else if (sectionId === 'home') {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      }
-    } else {
-      navigate(targetPath);
-
-      
-      setTimeout(() => {
+      if (sectionId && sectionId !== 'top' && sectionId !== 'home') {
         const element = document.getElementById(sectionId);
         if (element) {
           element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        } else if (sectionId === 'home') {
-          window.scrollTo({ top: 0, behavior: 'smooth' });
+          return;
         }
+      }
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      navigate(targetPath);
+
+      setTimeout(() => {
+        if (sectionId && sectionId !== 'top' && sectionId !== 'home') {
+          const element = document.getElementById(sectionId);
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            return;
+          }
+        }
+        window.scrollTo({ top: 0, behavior: 'smooth' });
       }, 120);
     }
   };
 
-  
   const navLinkStyles = `
     relative text-left bg-transparent border-none cursor-pointer font-medium sm:font-semibold 
     text-secondary dark:text-stone-200 hover:text-secondary dark:hover:text-primary 
@@ -52,9 +54,11 @@ const Navbar = ({ theme, setTheme }) => {
         onClick={() => handleNavigation('/', 'home')}
       />
 
-      
+     
       <div
-        className={`text-secondary dark:text-white sm:text-sm gap-6 ml-18 ${!sidebarOpen ? 'max-sm:w-0 overflow-hidden' : 'max-sm:w-60 max-sm:pl-10'} max-sm:fixed top-0 bottom-0 right-0 max-sm:min-h-screen max-sm:h-full max-sm:flex-col max-sm:bg-tertiary dark:max-sm:bg-stone-900 max-sm:text-white max-sm:pt-20 flex sm:items-center transition-all duration-300`}
+        className={`text-secondary dark:text-white sm:text-sm gap-6 ml-18 ${
+          !sidebarOpen ? 'max-sm:w-0 overflow-hidden' : 'max-sm:w-60 max-sm:pl-10'
+        } max-sm:fixed top-0 bottom-0 right-0 max-sm:min-h-screen max-sm:h-full max-sm:flex-col max-sm:bg-tertiary dark:max-sm:bg-stone-900 max-sm:text-white max-sm:pt-20 flex sm:items-center transition-all duration-300`}
       >
         <img
           src={assets.close_icon}
@@ -70,8 +74,17 @@ const Navbar = ({ theme, setTheme }) => {
           Home
         </button>
 
+        
         <button
-          onClick={() => handleNavigation('/', 'services')}
+          onClick={() => handleNavigation('/programs', 'top')}
+          className={navLinkStyles}
+        >
+          Programs
+        </button>
+
+        
+        <button
+          onClick={() => handleNavigation('/services', 'top')}
           className={navLinkStyles}
         >
           Services
@@ -99,7 +112,7 @@ const Navbar = ({ theme, setTheme }) => {
         </button>
       </div>
 
-     
+      
       <div className='flex items-center gap-2 sm:gap-4'>
         <ThemeToggleBtn theme={theme} setTheme={setTheme} />
 
@@ -110,9 +123,8 @@ const Navbar = ({ theme, setTheme }) => {
           className='w-8 sm:hidden cursor-pointer hover:opacity-80 active:scale-95 transition-all'
         />
 
-        
         <button
-          onClick={() => handleNavigation('/', 'early-access')}
+          onClick={() => handleNavigation('/programs', 'top')}
           className='text-sm max-sm:hidden flex items-center gap-2 bg-secondary hover:bg-tertiary dark:bg-primary dark:text-tertiary dark:hover:bg-light text-white px-6 py-2.5 rounded-full cursor-pointer hover:scale-[1.03] active:scale-[0.98] transition-all border-none font-bold shadow-sm hover:shadow-md'
         >
           Connect{' '}
