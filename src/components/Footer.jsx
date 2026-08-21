@@ -71,7 +71,7 @@ const Footer = () => {
           </div>
 
           
-          <<div className='flex flex-col items-center md:items-end text-center md:text-right pt-2'>
+          <div className='flex flex-col items-center md:items-end text-center md:text-right pt-2'>
             <span className='text-[10px] sm:text-[11px] font-black uppercase tracking-wider text-secondary dark:text-light mb-1'>
               Proud Member of the
             </span>
