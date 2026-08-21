@@ -37,7 +37,7 @@ const Footer = () => {
         <div className='flex flex-col items-center md:items-end gap-4'>
           <div className='flex items-center gap-5 text-sm font-medium text-tertiary dark:text-white'>
             <a
-              className='hover:text-secondary dark:hover:text-stone-300 transition-colors duration-200'
+              className='hover:text-primary dark:hover:text-stone-300 transition-colors duration-200'
               href='https://www.facebook.com/profile.php?id=61579262037395'
               target='_blank'
               rel='noopener noreferrer'
@@ -45,7 +45,7 @@ const Footer = () => {
               Facebook
             </a>
             <a
-              className='hover:text-secondary dark:hover:text-stone-300 transition-colors duration-200'
+              className='hover:text-primary dark:hover:text-stone-300 transition-colors duration-200'
               href='https://www.instagram.com/wildbytech/'
               target='_blank'
               rel='noopener noreferrer'
@@ -53,7 +53,7 @@ const Footer = () => {
               Instagram
             </a>
             <a
-              className='hover:text-secondary dark:hover:text-stone-300 transition-colors duration-200'
+              className='hover:text-primary dark:hover:text-stone-300 transition-colors duration-200'
               href='https://www.tiktok.com/@wildbyte23?_r=1&_t=ZT-96qXyyVJCQw'
               target='_blank'
               rel='noopener noreferrer'
@@ -61,7 +61,7 @@ const Footer = () => {
               TikTok
             </a>
             <a
-              className='hover:text-secondary dark:hover:text-stone-300 transition-colors duration-200'
+              className='hover:text-primary dark:hover:text-stone-300 transition-colors duration-200'
               href='https://www.linkedin.com/company/wild-byte-llc/'
               target='_blank'
               rel='noopener noreferrer'
@@ -72,10 +72,10 @@ const Footer = () => {
 
           
           <div className='flex flex-col items-center md:items-end text-center md:text-right pt-2'>
-            <span className='text-[10px] sm:text-[11px] font-black uppercase tracking-wider text-secondary dark:text-light mb-1'>
+            <span className='text-[10px] sm:text-[11px] font-extrabold uppercase tracking-wider text-secondary dark:text-light mb-1'>
               Proud Member of the
             </span>
-            <span className='text-xs sm:text-sm font-extrabold text-tertiary dark:text-white mb-2.5'>
+            <span className='text-xs sm:text-sm font-extrabold text-secondary dark:text-white mb-2.5'>
               Rancho Cucamonga Chamber of Commerce
             </span>
             
@@ -87,9 +87,9 @@ const Footer = () => {
               title='View Wild Byte LLC on the Rancho Cucamonga Chamber of Commerce Directory'
             >
               <img
-                src='/rc-chamber-logo.png'
+                src={assets.chamber_logo}
                 alt='Proud Member of the Rancho Cucamonga Chamber of Commerce'
-                className='h-20 sm:h-24 md:h-28 w-auto max-w-[240px] object-contain rounded-xl p-2 bg-white/90 dark:bg-white shadow-sm border border-stone-200 dark:border-transparent'
+                className='h-20 sm:h-24 md:h-28 w-auto max-w-[240px] object-contain rounded-xl p-2 bg-primary dark:bg-white shadow-sm border border-stone-200 dark:border-transparent'
               />
             </a>
           </div>

@@ -36,6 +36,7 @@ import about_us1 from './about_us1.png'
 import about_us2 from './about_us2.png'
 import tiktok_preview from './tiktok_preview.PNG'
 import service_map from './service_map.png'
+import chamber_logo from './rancho_chamber_logo.png'
 
 
 export const earlyAccessImages = [
@@ -83,7 +84,8 @@ const assets = {
   about_us1,
   about_us2,
   tiktok_preview,
-  service_map
+  service_map,
+  chamber_logo
 }
 
 export default assets
