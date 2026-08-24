@@ -60,7 +60,7 @@ const JuniorEcologistModal = () => {
         </h3>
 
         <p className="text-xs sm:text-sm text-stone-600 dark:text-stone-300 mt-2 leading-relaxed">
-          Join us at Root 66 Community Garden for a 7-week, hands-on outdoor STEM adventure featuring plant ecology, soil microscopy, animal care, and digital storytelling!
+          Join us at Root 66 Community Garden for a 7-week, hands-on outdoor nature connection & adventure featuring plant ecology, soil microscopy, animal care, and digital storytelling!
         </p>
 
         
