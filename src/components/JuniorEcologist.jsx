@@ -2,8 +2,11 @@ import React from 'react';
 import assets from '../assets/assets';
 
 const JuniorEcologist = () => {
-  const calendlyUrl =
-    'https://calendly.com/wildbyte-avictoria/junior-ecologist-workshop-series';
+  
+  const adobeFormUrl =
+    'https://na5.documents.adobe.com/public/esignWidget?wid=CBFCIBAA3AAABLblqZhAyjyilF9qmS4ce_DThEYyCqBT7Di70ym0m5Z_cisiuYMt_Hg7zwFDKBzPjfVcTivM*';
+  const stripePaymentUrl =
+    'https://buy.stripe.com/4gMfZh6PT5Z7dmr4eM3cc03';
 
   const quickStats = [
     {
@@ -55,7 +58,7 @@ const JuniorEcologist = () => {
       className="py-16 px-4 sm:px-8 lg:px-16 max-w-6xl mx-auto transition-colors duration-300 scroll-mt-16"
     >
       <div className="bg-light dark:bg-stone-900 border border-secondary/30 dark:border-stone-800 rounded-3xl p-6 sm:p-10 shadow-sm">
-        
+
         <div className="text-center max-w-2xl mx-auto mb-10">
           <span className="inline-block px-3.5 py-1 rounded-full text-xs font-extrabold tracking-wider uppercase bg-primary text-secondary dark:bg-primary/20 dark:text-primary mb-3">
             Fall 2026 Workshop Series
@@ -68,7 +71,6 @@ const JuniorEcologist = () => {
           </p>
         </div>
 
-        
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-10">
           {quickStats.map((stat, idx) => (
             <div
@@ -90,7 +92,7 @@ const JuniorEcologist = () => {
         </div>
 
         
-        <div className="bg-secondary dark:bg-stone-800 text-white rounded-2xl p-6 sm:p-8 mb-12 flex flex-col md:flex-row items-center justify-between gap-6 shadow-md">
+        <div className="bg-secondary dark:bg-stone-800 text-white rounded-2xl p-6 sm:p-8 mb-12 flex flex-col gap-6 shadow-md">
           <div>
             <span className="text-[11px] font-black uppercase tracking-wider text-primary">
               Limited Registration Spots
@@ -99,27 +101,34 @@ const JuniorEcologist = () => {
               Ready to reserve your child's spot?
             </h3>
             <p className="text-xs sm:text-sm text-stone-200 dark:text-stone-300 mt-1 max-w-xl">
-              Register directly on Calendly. Use code <strong className="text-primary">WILDBYTE26</strong> for each additional sibling ($75).
+              Two quick steps: fill out the registration form, then submit payment.
+              Each additional child will require a completed registration form and a separate payment ($75).
             </p>
           </div>
 
-          <a
-            href={calendlyUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-full md:w-auto inline-flex items-center justify-center gap-2 bg-primary hover:bg-light text-tertiary dark:hover:bg-primary/90 font-extrabold text-xs uppercase tracking-wider py-3.5 px-7 rounded-xl transition-all shadow-md active:scale-95 text-center shrink-0"
-          >
-            Register on Calendly
-            <img
-              src={assets.arrow_icon}
-              alt=""
-              width={12}
-              className="invert-0"
-            />
-          </a>
+          <div className="flex flex-col sm:flex-row gap-3">
+            <a
+              href={adobeFormUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-1 inline-flex items-center justify-center gap-2 bg-primary hover:bg-light text-tertiary dark:hover:bg-primary/90 font-extrabold text-xs uppercase tracking-wider py-3.5 px-7 rounded-xl transition-all shadow-md active:scale-95 text-center"
+            >
+              1. Complete Registration Form
+              <img src={assets.arrow_icon} alt="" width={12} className="invert-0" />
+            </a>
+
+            <a
+              href={stripePaymentUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-1 inline-flex items-center justify-center gap-2 bg-light hover:bg-white text-tertiary font-extrabold text-xs uppercase tracking-wider py-3.5 px-7 rounded-xl transition-all shadow-md active:scale-95 text-center"
+            >
+              2. Pay Registration Fee
+              <img src={assets.arrow_icon} alt="" width={12} className="invert-0" />
+            </a>
+          </div>
         </div>
 
-        
         <div className="border-t border-secondary/20 dark:border-stone-800 pt-10 mb-8">
           <h3 className="text-xl sm:text-2xl font-bold text-tertiary dark:text-stone-100 text-center">
             Program Materials & Previews
@@ -129,14 +138,12 @@ const JuniorEcologist = () => {
           </p>
         </div>
 
-        
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-10">
           {pdfDocuments.map((doc) => (
             <div
               key={doc.id}
               className="flex flex-col bg-white dark:bg-stone-950 border border-secondary/20 dark:border-stone-800 rounded-3xl p-5 sm:p-6 shadow-sm overflow-hidden"
             >
-              
               <div className="mb-4">
                 <span className="text-[10px] font-extrabold uppercase tracking-wider px-2.5 py-1 rounded-md bg-primary text-secondary dark:bg-primary/20 dark:text-primary">
                   {doc.badge}
@@ -149,7 +156,6 @@ const JuniorEcologist = () => {
                 </p>
               </div>
 
-              
               <div className="relative w-full h-88 sm:h-96 rounded-2xl overflow-hidden border border-stone-200 dark:border-stone-800 bg-stone-100 dark:bg-stone-900 mb-4">
                 <iframe
                   src={`${doc.src}#toolbar=0&navpanes=0&scrollbar=1`}
@@ -159,7 +165,6 @@ const JuniorEcologist = () => {
                 />
               </div>
 
-              
               <div className="grid grid-cols-2 gap-2.5 mt-auto">
                 <a
                   href={doc.src}
@@ -182,7 +187,6 @@ const JuniorEcologist = () => {
           ))}
         </div>
 
-        
         <p className="text-center text-sm text-secondary dark:text-stone-400">
           Limited scholarships available • Garden pathways are unpaved. Contact{' '}
           <a
