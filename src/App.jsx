@@ -10,6 +10,7 @@ import Footer from './components/Footer';
 import OurWorkPage from './components/OurWorkPage';
 import AboutUs from './components/AboutUs';
 import JuniorEcologist from './components/JuniorEcologist';
+import UpcomingEvents from './components/UpComingEvents';
 import JuniorEcologistModal from './components/JuniorEcologistModal';
 
 // Informational Pages
@@ -47,6 +48,7 @@ const App = () => {
                 <>
                   <JuniorEcologistModal />
                   <Hero />
+                  <UpcomingEvents />
                   <EarlyAccess />
                 </>
               }

@@ -9,7 +9,7 @@ const Hero = () => {
     >
       <div className='inline-flex items-center border-2  border-primary p-1.5 pr-4 rounded-full cursor-pointer hover:scale-103 transition-all'>
         <a href='#early-access'>
-          <span className='text-sm font-semibold'>🚀 Join the Wild Byte Early Access Community</span>
+          <span className='text-sm font-semibold'>🌿 Join the Wild Byte Community</span>
         </a>
       </div>
 
