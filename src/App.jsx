@@ -10,7 +10,7 @@ import Footer from './components/Footer';
 import OurWorkPage from './components/OurWorkPage';
 import AboutUs from './components/AboutUs';
 import JuniorEcologist from './components/JuniorEcologist';
-import UpcomingEvents from './components/UpComingEvents';
+import UpcomingEvents from './components/UpcomingEvents';
 import JuniorEcologistModal from './components/JuniorEcologistModal';
 
 // Informational Pages
