@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // Layout & Core Components
@@ -24,6 +24,11 @@ import ProtectedRoute from './components/ProtectedRoute';
 import Login from './pages/Login';
 import ArchivalUpload from './pages/workspace/ArchivalUpload';
 
+const PortalDashboard = lazy(() => import('./pages/portal/PortalDashboard'));
+const PortalUpload = lazy(() => import('./pages/portal/PortalUpload'));
+const PortalPresentation = lazy(() => import('./pages/portal/PortalPresentation'));
+const AdminInvites = lazy(() => import('./pages/workspace/AdminInvites'));
+
 const App = () => {
   const [theme, setTheme] = useState(
     localStorage.getItem('theme') ? localStorage.getItem('theme') : 'light',
@@ -40,6 +45,7 @@ const App = () => {
         
           <Navbar theme={theme} setTheme={setTheme} />
 
+          <Suspense fallback={null}>
           <Routes>
             
             <Route
@@ -86,15 +92,47 @@ const App = () => {
 
            
             <Route
-              path='/workspace'
-              element={
-                <ProtectedRoute>
-                  <ArchivalUpload />
-                </ProtectedRoute>
-              }
-            />
+  path='/workspace'
+  element={
+    <ProtectedRoute allowedTiers={['admin']}>
+      <ArchivalUpload />
+    </ProtectedRoute>
+  }
+/>
+<Route
+  path='/workspace/invites'
+  element={
+    <ProtectedRoute allowedTiers={['admin']}>
+      <AdminInvites />
+    </ProtectedRoute>
+  }
+/>
+<Route
+  path='/portal'
+  element={
+    <ProtectedRoute allowedTiers={['parent', 'admin']}>
+      <PortalDashboard />
+    </ProtectedRoute>
+  }
+/>
+<Route
+  path='/portal/upload/:childId'
+  element={
+    <ProtectedRoute allowedTiers={['parent', 'admin']}>
+      <PortalUpload />
+    </ProtectedRoute>
+  }
+/>
+<Route
+  path='/portal/presentation/:childId'
+  element={
+    <ProtectedRoute allowedTiers={['parent', 'admin']}>
+      <PortalPresentation />
+    </ProtectedRoute>
+  }
+/>
           </Routes>
-
+</Suspense>
        
           <Footer />
         </div>
