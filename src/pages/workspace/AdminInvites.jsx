@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import React, { useCallback, useEffect, useState } from 'react';
 import { collection, deleteDoc, doc, getDocs, serverTimestamp, setDoc } from 'firebase/firestore';
 import { db } from '../../firebase';
@@ -49,7 +50,9 @@ const AdminInvites = () => {
       <p className='mt-2 text-sm text-stone-600 dark:text-stone-300'>
         Add the email each enrolled family will use. They can then sign in from the Parents tab on the login page.
       </p>
-
+<Link to='/workspace/showcase' className='inline-block mt-3 text-sm font-bold text-primary underline'>
+        Open projector showcase
+      </Link>
       <form onSubmit={add} className='mt-6 flex flex-col sm:flex-row gap-3'>
         <input
           type='email' required value={email} onChange={(e) => setEmail(e.target.value)}

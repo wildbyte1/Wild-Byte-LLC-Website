@@ -9,6 +9,7 @@ const C = {
   muted: '6B7280',
 };
 const FONT = 'Calibri';
+const PPTX_MIME = 'application/vnd.openxmlformats-officedocument.presentationml.presentation';
 
 const stripPrefix = (d) => d.replace(/^data:/, '');
 
@@ -111,5 +112,8 @@ export async function buildDeck({ childName, title, favorite, next, items }) {
   });
 
   const safe = childName.replace(/[^a-z0-9]+/gi, '-').replace(/^-|-$/g, '') || 'presentation';
-  await pptx.writeFile({ fileName: `${safe}-nature-journal.pptx` });
+  const fileName = `${safe}-nature-journal.pptx`;
+  const out = await pptx.write({ outputType: 'blob' });
+  const blob = new Blob([out], { type: PPTX_MIME });
+  return { blob, fileName };
 }

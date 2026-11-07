@@ -28,6 +28,7 @@ const PortalDashboard = lazy(() => import('./pages/portal/PortalDashboard'));
 const PortalUpload = lazy(() => import('./pages/portal/PortalUpload'));
 const PortalPresentation = lazy(() => import('./pages/portal/PortalPresentation'));
 const AdminInvites = lazy(() => import('./pages/workspace/AdminInvites'));
+const Showcase = lazy(() => import('./pages/workspace/Showcase'));
 
 const App = () => {
   const [theme, setTheme] = useState(
@@ -107,6 +108,16 @@ const App = () => {
     </ProtectedRoute>
   }
 />
+
+<Route
+  path='/workspace/showcase'
+  element={
+    <ProtectedRoute allowedTiers={['admin']}>
+      <Showcase />
+    </ProtectedRoute>
+  }
+/>
+
 <Route
   path='/portal'
   element={
