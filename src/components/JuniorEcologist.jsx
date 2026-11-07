@@ -1,5 +1,6 @@
 import React from 'react';
 import assets from '../assets/assets';
+import ParentPortalCTA from '../ParentPortalCTA';
 
 const JuniorEcologist = () => {
   
@@ -186,6 +187,12 @@ const JuniorEcologist = () => {
             </div>
           ))}
         </div>
+
+                <div className="mb-10">
+          <ParentPortalCTA />
+        </div>
+
+        <p className="text-center text-sm text-secondary dark:text-stone-400"></p>
 
         <p className="text-center text-sm text-secondary dark:text-stone-400">
           Limited scholarships available • Garden pathways are unpaved. Contact{' '}

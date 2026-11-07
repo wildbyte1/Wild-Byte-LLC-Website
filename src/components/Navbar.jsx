@@ -110,6 +110,13 @@ const Navbar = ({ theme, setTheme }) => {
         >
           Contact Us
         </button>
+
+        <button
+          onClick={() => handleNavigation('/login', 'top')}
+          className={navLinkStyles}
+        >
+          Parent Portal
+        </button>
       </div>
 
       
