@@ -1,10 +1,10 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import assets from '../assets/assets';
 
-// Add new events here. Dates use ISO format (YYYY-MM-DD) so they sort correctly.
-// Past events are hidden automatically. "category" drives the color-coded tag.
-// Links: use "links" for one or more buttons/links. Set style: 'button' for a filled
-// button (good for registration/payment). Legacy "link" + "linkLabel" still work.
+// Set this to your exact route path (e.g. '/programs', '/junior-ecologist', or '/programs#junior-ecologist')
+const JUNIOR_ECO_PROGRAM_ROUTE = '/programs';
+
 const events = [
   {
     id: 'junior-ecologist-kickoff',
@@ -14,28 +14,11 @@ const events = [
     location: 'Root 66 Community Garden, Rancho Cucamonga',
     description:
       'First session of the 7-week Junior Ecologist series — soil science, plant biology, and garden exploration for ages 6–12.',
-    link: '#junior-ecologist',
-    linkLabel: 'Program details',
-    category: 'Workshop',
-  },
-  {
-    id: 'virtual-workshops',
-    date: '2026-11-03',
-    time: '6:00 PM – 7:00 PM',
-    title: 'The Armchair Naturalist: Botany, Heritage & Digital Nature',
-    location: 'Zoom',
-    description:
-      'Explore the living world from the comfort of your home. Join Wild Byte for an accessible 4-week virtual workshop series designed for adults. Each week, we decode the fascinating stories of everyday plants and animals in our natural communities.',
     links: [
       {
-        label: 'Register: Full 4-Week Series',
-        url: 'https://buy.stripe.com/fZu3cv1vzcnv2HN5iQ3cc05',
-        style: 'button',
-      },
-      {
-        label: 'Single Session',
-        url: 'https://buy.stripe.com/bJe00jgqt73bcin9z63cc04',
-        style: 'button-outline',
+        label: 'Program details',
+        url: JUNIOR_ECO_PROGRAM_ROUTE,
+        style: 'text',
       },
     ],
     category: 'Workshop',
@@ -48,8 +31,64 @@ const events = [
     location: 'Root 66 Community Garden, Rancho Cucamonga',
     description:
       'Closing session of the workshop series — kids present their digital storytelling projects to family and friends.',
-    link: '#junior-ecologist',
-    linkLabel: 'Program details',
+    links: [
+      {
+        label: 'Program details',
+        url: JUNIOR_ECO_PROGRAM_ROUTE,
+        style: 'text',
+      },
+    ],
+    category: 'Workshop',
+  },
+  {
+    id: 'junior-ecologist-winter-2027-ages-3-6',
+    date: '2027-01-09',
+    time: 'Saturdays, 9:00 – 11:00 AM',
+    title: 'Junior Ecologist Winter Series (Ages 3–6)',
+    location: 'Root 66 Community Garden, Rancho Cucamonga',
+    description:
+      'A 7-week hands-on Saturday morning nature series running Jan 9 – Feb 20, 2027. Little ecologists discover living soil, gentle farm animals, seed planting, bug safaris, and nature art.',
+    links: [
+      {
+        label: 'View Program Details & Register',
+        url: JUNIOR_ECO_PROGRAM_ROUTE,
+        style: 'button',
+      },
+    ],
+    category: 'Workshop',
+  },
+  {
+    id: 'junior-ecologist-winter-2027-ages-7-12',
+    date: '2027-01-11',
+    time: 'Mondays, 4:00 – 5:30 PM',
+    title: 'Junior Ecologist Winter Series (Ages 7–12)',
+    location: 'Root 66 Community Garden, Rancho Cucamonga',
+    description:
+      'A 7-week after-school field biology series running Jan 11 – Feb 22, 2027. Features digital field microscopy, California native plant adaptations, food web mapping, animal stewardship, and student research presentations.',
+    links: [
+      {
+        label: 'View Program Details & Register',
+        url: JUNIOR_ECO_PROGRAM_ROUTE,
+        style: 'button',
+      },
+    ],
+    category: 'Workshop',
+  },
+  {
+    id: 'armchair-naturalist-postponed-2027',
+    date: '2027-01-20',
+    time: 'Evenings · Dates TBA',
+    title: 'The Armchair Naturalist (Postponed to Early 2027)',
+    location: 'Zoom (Virtual)',
+    description:
+      'Our 4-week adult virtual workshop series exploring botany, heritage, and digital nature has been postponed until after the holiday season to allow for a full, interactive cohort. Join the priority waitlist to receive advance notification when dates and registrations reopen.',
+    links: [
+      {
+        label: 'Join Priority Waitlist',
+        url: 'mailto:contact@wildbyte.dev?subject=The%20Armchair%20Naturalist%20Waitlist',
+        style: 'button-outline',
+      },
+    ],
     category: 'Workshop',
   },
 ];
@@ -60,17 +99,11 @@ const categoryStyles = {
 };
 
 const linkStyles = {
-  text: 'inline-flex items-center gap-1.5 text-xs font-bold text-secondary dark:text-primary hover:underline',
+  text: 'inline-flex items-center gap-1.5 text-xs font-bold text-secondary dark:text-primary hover:underline cursor-pointer',
   button:
-    'inline-flex items-center justify-center gap-1.5 text-xs font-extrabold uppercase tracking-wider px-4 py-2.5 rounded-xl bg-secondary text-white hover:bg-tertiary dark:bg-primary dark:text-tertiary dark:hover:bg-primary/90 transition-colors',
+    'inline-flex items-center justify-center gap-2 text-xs font-extrabold uppercase tracking-wider px-5 py-3 rounded-xl bg-secondary text-white hover:bg-tertiary dark:bg-primary dark:text-tertiary dark:hover:bg-primary/90 transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5 active:scale-95 cursor-pointer',
   'button-outline':
-    'inline-flex items-center justify-center gap-1.5 text-xs font-extrabold uppercase tracking-wider px-4 py-2.5 rounded-xl border border-secondary text-secondary hover:bg-secondary hover:text-white dark:border-primary dark:text-primary dark:hover:bg-primary dark:hover:text-tertiary transition-colors',
-};
-
-const getLinks = (event) => {
-  if (event.links) return event.links;
-  if (event.link) return [{ label: event.linkLabel || 'Learn more', url: event.link }];
-  return [];
+    'inline-flex items-center justify-center gap-2 text-xs font-extrabold uppercase tracking-wider px-5 py-3 rounded-xl border border-secondary text-secondary hover:bg-secondary hover:text-white dark:border-primary dark:text-primary dark:hover:bg-primary dark:hover:text-tertiary transition-all shadow-sm active:scale-95 cursor-pointer',
 };
 
 const formatDate = (isoDate) => {
@@ -83,6 +116,7 @@ const formatDate = (isoDate) => {
 };
 
 const UpcomingEvents = () => {
+  const navigate = useNavigate();
   const today = new Date();
   today.setHours(0, 0, 0, 0);
 
@@ -90,12 +124,38 @@ const UpcomingEvents = () => {
     .filter((e) => new Date(`${e.date}T00:00:00`) >= today)
     .sort((a, b) => new Date(a.date) - new Date(b.date));
 
+  const handleNavigation = (e, url) => {
+    // External URLs and mailto open normally
+    if (url.startsWith('http') || url.startsWith('mailto:')) {
+      return;
+    }
+
+    e.preventDefault();
+
+    // Handle React Router navigation
+    if (url.startsWith('/')) {
+      navigate(url);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      return;
+    }
+
+    // In-page anchor on the current view
+    if (url.startsWith('#')) {
+      const el = document.getElementById(url.replace('#', ''));
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' });
+      } else {
+        navigate(`/${url}`);
+      }
+    }
+  };
+
   return (
     <section
       id="events"
       className="py-16 px-4 sm:px-8 lg:px-16 max-w-6xl mx-auto transition-colors duration-300 scroll-mt-16"
     >
-      <div className=" dark:bg-stone-900 border border-secondary/30 dark:border-stone-800 rounded-3xl p-6 sm:p-10 shadow-sm">
+      <div className="dark:bg-stone-900 border border-secondary/30 dark:border-stone-800 rounded-3xl p-6 sm:p-10 shadow-sm">
         <div className="text-center max-w-2xl mx-auto mb-12">
           <h2 className="text-3xl sm:text-4xl font-bold text-tertiary dark:text-stone-100 tracking-tight">
             Upcoming Events
@@ -123,7 +183,7 @@ const UpcomingEvents = () => {
             {upcoming.map((event, idx) => {
               const { month, day, weekday } = formatDate(event.date);
               const isLast = idx === upcoming.length - 1;
-              const links = getLinks(event);
+              const links = event.links || [];
 
               return (
                 <li key={event.id} className="relative flex gap-5 sm:gap-8 pb-10 last:pb-0">
@@ -150,7 +210,9 @@ const UpcomingEvents = () => {
                       </span>
                       {event.category && (
                         <span
-                          className={`text-[10px] font-extrabold uppercase tracking-wider px-2.5 py-0.5 rounded-full ${categoryStyles[event.category] || categoryStyles.Community}`}
+                          className={`text-[10px] font-extrabold uppercase tracking-wider px-2.5 py-0.5 rounded-full ${
+                            categoryStyles[event.category] || categoryStyles.Community
+                          }`}
                         >
                           {event.category}
                         </span>
@@ -168,22 +230,30 @@ const UpcomingEvents = () => {
 
                     {links.length > 0 && (
                       <div className="flex flex-wrap items-center gap-2.5 mt-4">
-                        {links.map((l) => {
-                          const isAnchor = l.url.startsWith('#');
+                        {links.map((l, lIdx) => {
+                          const isExternal = l.url.startsWith('http') || l.url.startsWith('mailto:');
                           const styleKey = l.style && linkStyles[l.style] ? l.style : 'text';
                           return (
                             <a
-                              key={l.url}
+                              key={`${event.id}-link-${lIdx}`}
                               href={l.url}
-                              {...(isAnchor
-                                ? {}
-                                : { target: '_blank', rel: 'noopener noreferrer' })}
+                              onClick={(e) => handleNavigation(e, l.url)}
+                              {...(isExternal
+                                ? { target: '_blank', rel: 'noopener noreferrer' }
+                                : {})}
                               className={linkStyles[styleKey]}
                             >
                               {l.label}
-                              {styleKey === 'text' && (
-                                <img src={assets.arrow_icon} alt="" width={10} />
-                              )}
+                              <img
+                                src={assets.arrow_icon}
+                                alt=""
+                                width={10}
+                                className={
+                                  styleKey === 'button'
+                                    ? 'brightness-0 invert dark:brightness-100 dark:invert-0'
+                                    : ''
+                                }
+                              />
                             </a>
                           );
                         })}
